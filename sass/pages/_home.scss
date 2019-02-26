@@ -42,6 +42,8 @@
 			    border-top: 1px solid transparent;
 			    margin-left: 80px;
 			    transition: all .4s;
+			    position: relative;
+			    z-index: 2000;
 
 			    &.active {
 			    	border-left: 1px solid #fff;
@@ -94,6 +96,8 @@
 		display: flex;
 		align-items: flex-end;
 		    margin-right: 40px;
+		    position: relative;
+		    z-index:2000;
 		
 
 		.login_img_box {
@@ -360,7 +364,7 @@
 	right: -100%;
 	background-color: #fff;
 	width: 500px;
-	z-index: 1000;
+	z-index: 3000;
 	height: 100%;
 	transition: all .6s;
 	transition-timing-function: cubic-bezier(.09,.71,0,1.04);
@@ -618,7 +622,7 @@
 
 	    	 span {
 	    	 	color: #000;
-	    	 	font-size: 21px;
+	    	 	font-size: 18px;
 	    	 	font-family: 'Conv_bpg_le_studio';
 	    	 	
 	    	 	&:first-child {
@@ -693,6 +697,10 @@ transform: scale(1,1);
 	.days_temp_info {
 		border:1px solid #ccc;
 		    padding: 10px 10px;
+
+		    &:first-child {
+		    	margin-right:20px;
+		    }
 	}
 
 	.days_temp_header {
@@ -748,9 +756,10 @@ transform: scale(1,1);
 
 
 .calendar_fluid{
-	padding: 20px 20px;
+	padding: 20px 35px;
 	background-color: #fff;
-	margin: 40px 0;
+	margin: 40px auto;
+	max-width: 950px;
 
 	 .calendar_tittle {
 	 	text-align: center;
@@ -761,6 +770,7 @@ transform: scale(1,1);
 	 	 	border-bottom: 1px solid #000;
 	 	 	padding-bottom: 5px;
 	 	 	font-family: 'Conv_bpg_le_studio';
+	 	 	font-size: 17px;
 	 	 }
 	 }
 
@@ -769,10 +779,18 @@ transform: scale(1,1);
 
 
 .calendar_box {
+	margin-top: 20px;
 
 	&>div {
-				display: flex;
-    			justify-content: space-between;
+		display: flex;
+    	justify-content: space-between;
+    	text-transform: capitalize;
+
+		&:not(:last-child){
+
+    			 border-bottom: 1px solid #ccccccb0;
+		}
+				
 	}
 
 		.calendar_hour_box {
@@ -787,9 +805,103 @@ transform: scale(1,1);
 
 			 	 }
 			 }
+
+
 		}
 
 
 	}
 
 	
+			 .calendar_weather_box {
+			 	text-align: center;
+			 	 span {
+			 	 	font-family: 'Conv_bpg_le_studio';
+			 	 	color: #373d43;;
+			 	 	font-size: 12px;
+			 	 	display: block;
+			 	 }
+
+			 	 .cl_content div:first-child {
+			 	 	font-family: 'Conv_bpg_le_studio';
+				    color: #1ac1b0;
+				    font-size: 14px;
+			 	 }
+
+			 	  .cl_content div:last-child {
+			 	 	font-family: 'Conv_bpg_le_studio';
+			 	 	color: #373d43;
+			 	 	font-size: 14px;
+			 	 }
+
+
+			 	 	.cl_content {
+
+			 	 		 img {
+
+			 	 		 	 display: inline-block;
+			 	 		 	 margin-bottom: 5px;
+			 	 		 }
+			 	 	}
+
+
+			 }
+
+.calendar_box div>div {
+	width: 65px;
+    line-height: 10px;
+
+    padding: 10px 0;
+    text-align: center;
+
+
+}
+
+.calendar_hour_box div:first-child {
+	
+	width: 100px !important;
+	text-align: left;
+}
+
+.calendar_weather_box div:first-child {
+
+	text-align: left;
+	width: 100px  !important;
+
+}
+
+.calendar_fluid .owl-nav {
+	display: block !important;
+
+
+	 button {
+
+	 		width: 30px;
+	 		height: 30px;
+	 		background-position: center !important;
+			background-size: contain !important;
+			background-repeat: no-repeat !important;
+			outline: none;
+			position: absolute;
+			z-index: 1000;
+			transform: translateY(-50%);
+
+
+	 		&.owl-prev {
+	 			background-image: url("../img/left_arrow-82.png");
+	 			top: 50%;
+	 			left: 0px;
+	 		}
+
+	 		&.owl-next {
+	 			background-image: url("../img/right_arrow-82.png");
+	 			top:50%;
+	 			right: 0px;
+
+	 		}
+
+	 	 span {
+	 	 	display: none;
+	 	 }
+	 }
+}

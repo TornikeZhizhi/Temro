@@ -66,7 +66,9 @@ a:hover {
       border-left: 1px solid transparent;
       border-top: 1px solid transparent;
       margin-left: 80px;
-      transition: all .4s; }
+      transition: all .4s;
+      position: relative;
+      z-index: 2000; }
       .header .header_left_fluid .search_fluid.active {
         border-left: 1px solid #fff;
         border-top: 1px solid #fff; }
@@ -97,7 +99,9 @@ a:hover {
     .header .header_right_fluid .login_box {
       display: flex;
       align-items: flex-end;
-      margin-right: 40px; }
+      margin-right: 40px;
+      position: relative;
+      z-index: 2000; }
       .header .header_right_fluid .login_box .login_img_box {
         cursor: pointer;
         margin-right: 20px; }
@@ -239,7 +243,7 @@ a:hover {
   right: -100%;
   background-color: #fff;
   width: 500px;
-  z-index: 1000;
+  z-index: 3000;
   height: 100%;
   transition: all .6s;
   transition-timing-function: cubic-bezier(0.09, 0.71, 0, 1.04);
@@ -392,7 +396,7 @@ a:hover {
       align-items: center; }
       .wheather_charts_fluid .days_temp_box .days_temp_tittle span {
         color: #000;
-        font-size: 21px;
+        font-size: 18px;
         font-family: 'Conv_bpg_le_studio'; }
         .wheather_charts_fluid .days_temp_box .days_temp_tittle span:first-child {
           border-bottom: 1px solid #000; }
@@ -438,6 +442,8 @@ svg:hover .cls-3 {
   .days_temp_info_fluid .days_temp_info {
     border: 1px solid #ccc;
     padding: 10px 10px; }
+    .days_temp_info_fluid .days_temp_info:first-child {
+      margin-right: 20px; }
   .days_temp_info_fluid .days_temp_header {
     text-align: center; }
     .days_temp_info_fluid .days_temp_header span {
@@ -467,9 +473,10 @@ svg:hover .cls-3 {
   height: 400px; }
 
 .calendar_fluid {
-  padding: 20px 20px;
+  padding: 20px 35px;
   background-color: #fff;
-  margin: 40px 0; }
+  margin: 40px auto;
+  max-width: 950px; }
   .calendar_fluid .calendar_tittle {
     text-align: center; }
     .calendar_fluid .calendar_tittle h3 {
@@ -477,14 +484,76 @@ svg:hover .cls-3 {
       color: #373d43;
       border-bottom: 1px solid #000;
       padding-bottom: 5px;
-      font-family: 'Conv_bpg_le_studio'; }
+      font-family: 'Conv_bpg_le_studio';
+      font-size: 17px; }
 
-.calendar_box > div {
-  display: flex;
-  justify-content: space-between; }
-.calendar_box .calendar_hour_box .cl_content span {
-  font-family: 'Conv_bpg_le_studio';
-  color: #1ac1b0;
-  font-size: 14px; }
+.calendar_box {
+  margin-top: 20px; }
+  .calendar_box > div {
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize; }
+    .calendar_box > div:not(:last-child) {
+      border-bottom: 1px solid #ccccccb0; }
+  .calendar_box .calendar_hour_box .cl_content span {
+    font-family: 'Conv_bpg_le_studio';
+    color: #1ac1b0;
+    font-size: 14px; }
+
+.calendar_weather_box {
+  text-align: center; }
+  .calendar_weather_box span {
+    font-family: 'Conv_bpg_le_studio';
+    color: #373d43;
+    font-size: 12px;
+    display: block; }
+  .calendar_weather_box .cl_content div:first-child {
+    font-family: 'Conv_bpg_le_studio';
+    color: #1ac1b0;
+    font-size: 14px; }
+  .calendar_weather_box .cl_content div:last-child {
+    font-family: 'Conv_bpg_le_studio';
+    color: #373d43;
+    font-size: 14px; }
+  .calendar_weather_box .cl_content img {
+    display: inline-block;
+    margin-bottom: 5px; }
+
+.calendar_box div > div {
+  width: 65px;
+  line-height: 10px;
+  padding: 10px 0;
+  text-align: center; }
+
+.calendar_hour_box div:first-child {
+  width: 100px !important;
+  text-align: left; }
+
+.calendar_weather_box div:first-child {
+  text-align: left;
+  width: 100px  !important; }
+
+.calendar_fluid .owl-nav {
+  display: block !important; }
+  .calendar_fluid .owl-nav button {
+    width: 30px;
+    height: 30px;
+    background-position: center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    outline: none;
+    position: absolute;
+    z-index: 1000;
+    transform: translateY(-50%); }
+    .calendar_fluid .owl-nav button.owl-prev {
+      background-image: url("../img/left_arrow-82.png");
+      top: 50%;
+      left: 0px; }
+    .calendar_fluid .owl-nav button.owl-next {
+      background-image: url("../img/right_arrow-82.png");
+      top: 50%;
+      right: 0px; }
+    .calendar_fluid .owl-nav button span {
+      display: none; }
 
 /*# sourceMappingURL=main.css.map */

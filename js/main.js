@@ -64,6 +64,30 @@ new Chart(document.getElementById("mixed-chart"), {
 });
 
 
+
+
+$(document).ready(function(){
+			$('.calendar_fluid').owlCarousel({
+		    loop:true,
+		    margin:0,
+		    smartSpeed:1300,
+		    nav:true,
+		    responsive:{
+		        0:{
+		            items:1
+		        },
+		        600:{
+		            items:1
+		        },
+		        1000:{
+		            items:1
+		        }
+		    }
+		})
+
+	})
+
+
 })
 
 
