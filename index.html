@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/owlcarousel/assets/owl.carousel.min.css">
    	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+
 	<title>Temro</title>
 </head>
 <body>
@@ -46,8 +47,10 @@
 
 
 <div class="hourly_prognosis_fluid">
+
 	<div class="hourly_prog_box_fluid">
 
+	<div class="hourly_wrapper">	
 	<div class="hourly_prog_box">
 		<div class="hourly_prog_img">
 			<img src="img/Asset 1-8.png">
@@ -91,6 +94,9 @@
 			<span>15°</span>
 		</div>
 	</div>
+	</div>
+
+
 	</div>
 
 	<div class="hourly_prog_tittle">
@@ -325,7 +331,8 @@
 	<div class="weather_chart_container">
 
 		<div class="chart_box">
-		<canvas id="mixed-chart" width="800" height="450"></canvas>
+		<!-- <canvas id="mixed-chart" width="800" height="450"></canvas> -->
+		<canvas id="myChart" width="800" height="450" ></canvas>
 		</div>
 
 		
@@ -626,7 +633,8 @@
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="assets/owlcarousel/owl.carousel.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script> -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

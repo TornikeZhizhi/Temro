@@ -280,6 +280,11 @@
     position: absolute;
     right: 5%;
     bottom: calc(227px + 3%);
+    width: 300px;
+   
+    .hourly_wrapper {
+    	opacity: 1 !important;
+    }
 
 
 	.hourly_prog_box {
@@ -759,7 +764,7 @@ transform: scale(1,1);
 	padding: 20px 35px;
 	background-color: #fff;
 	margin: 40px auto;
-	max-width: 950px;
+	max-width: 1250px;
 
 	 .calendar_tittle {
 	 	text-align: center;
@@ -905,3 +910,5 @@ transform: scale(1,1);
 	 	 }
 	 }
 }
+
+

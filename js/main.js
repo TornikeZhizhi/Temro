@@ -41,27 +41,27 @@ $(document).ready(function(){
 		
 	 })
 
-new Chart(document.getElementById("mixed-chart"), {
-    type: 'bar',
-    data: {
-      labels: ["12:00", "13:00", "14:00", "15:00"],
-      datasets: [{
+// new Chart(document.getElementById("mixed-chart"), {
+//     type: 'bar',
+//     data: {
+//       labels: ["12:00", "13:00", "14:00", "15:00"],
+//       datasets: [{
          
-          type: "line",
-          borderColor: "#8e5ea2",
-          data: [312,42,3,734],
-          fill: false
-        }
-      ]
-    },
-    options: {
-      title: {
-        display: true,
-        text: 'საათობრივი პროგნოზი ტემპერატურის გრაფა'
-      },
-      legend: { display: false }
-    }
-});
+//           type: "line",
+//           borderColor: "#8e5ea2",
+//           data: [312,42,3,734],
+//           fill: false
+//         }
+//       ]
+//     },
+//     options: {
+//       title: {
+//         display: true,
+//         text: 'საათობრივი პროგნოზი ტემპერატურის გრაფა'
+//       },
+//       legend: { display: false }
+//     }
+// });
 
 
 
@@ -87,7 +87,85 @@ $(document).ready(function(){
 
 	})
 
-
 })
+
+
+
+	var temricha ={
+	"12:00":'40',
+	'13:00': "35",
+	'14:00': '33',
+	"15:00": '30',
+	'16:00':  '31',
+	'17:00':  '29',
+	'18:00':  '38',
+
+	}
+    var lableTitle= "საათობრივი პროგნოზი ტემპერატურის გრაფა"
+	var chatTime = Object.keys(temricha)
+	var tempricha = Object.values(temricha)
+
+// var ctx = document.getElementById("myChart").getContext('2d');
+	var ctx = document.getElementById("myChart");
+	// ctx.canvas.width = 600;
+// ctx.canvas.height = 400;
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: chatTime,
+        datasets: [{
+            label: lableTitle,
+            data: tempricha,
+            fill: false,
+            lineTension: 0, 
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 0
+        }]
+    },
+    options: {
+    	bezierCurve : false,
+    	legend: {
+            display: false,
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:false,
+                    fontSize: 16,
+
+                },
+                scaleLabel: {
+                display: true,
+                labelString: 'Temperature'
+            },
+            afterTickToLabelConversion : function(q){
+        for(var tick in q.ticks){
+            q.ticks[tick] += '\u00B0C';
+            }
+           }
+            }],
+          xAxes: [{
+
+            gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+            },
+             position: 'top' ,
+             ticks: {
+                  fontColor: "#1ac1b0", 
+                  fontSize: 16,
+                },
+        },
+
+        ],
+        }
+    }
+});
 
 

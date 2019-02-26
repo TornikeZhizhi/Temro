@@ -190,7 +190,10 @@ a:hover {
   flex-direction: column;
   position: absolute;
   right: 5%;
-  bottom: calc(227px + 3%); }
+  bottom: calc(227px + 3%);
+  width: 300px; }
+  .hourly_prognosis_fluid .hourly_wrapper {
+    opacity: 1 !important; }
   .hourly_prognosis_fluid .hourly_prog_box {
     display: flex;
     align-items: center;
@@ -476,7 +479,7 @@ svg:hover .cls-3 {
   padding: 20px 35px;
   background-color: #fff;
   margin: 40px auto;
-  max-width: 950px; }
+  max-width: 1250px; }
   .calendar_fluid .calendar_tittle {
     text-align: center; }
     .calendar_fluid .calendar_tittle h3 {
