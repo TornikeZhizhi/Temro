@@ -42,3 +42,11 @@ a:hover {
     border-radius: 5px;
 }
 
+@font-face {
+    font-family: 'Conv_bpg_le_studio';
+    src: url('../fonts/bpg_le_studio.eot');
+    src: local('☺'), url('../fonts/bpg_le_studio.woff') format('woff'), url('../fonts/bpg_le_studio.ttf') format('truetype'), url('../fonts/bpg_le_studio.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
