@@ -360,7 +360,7 @@ a:hover {
   100% {
     transform: translate3d(0, 0, 0) rotateY(280deg) translateY(0px); } }
 .center_fluid {
-  flex: 0 0 57%; }
+  margin: 0 30px; }
 
 .wheather_charts_fluid {
   width: 100%;
@@ -376,21 +376,22 @@ a:hover {
     display: flex;
     justify-content: space-between; }
   .wheather_charts_fluid .banner_fluid {
-    flex: 0 0 20%;
+    flex: 1;
     background-color: #d9ecf9;
     height: 700px; }
   .wheather_charts_fluid .chart_box {
     flex: 0 0 60%;
     background-color: #fff;
-    padding: 20px; }
+    padding: 20px;
+    margin-right: 20px; }
     .wheather_charts_fluid .chart_box canvas {
       width: 600px !important;
       height: 250px !important; }
   .wheather_charts_fluid .days_temp_box {
     background-color: #fff;
-    padding: 20px 55px;
+    padding: 20px 15px;
     height: 100%;
-    flex: 0 0 38%; }
+    flex: 1; }
     .wheather_charts_fluid .days_temp_box .days_temp_tittle {
       padding: 0 20px;
       text-align: center;
@@ -479,7 +480,7 @@ svg:hover .cls-3 {
   padding: 20px 35px;
   background-color: #fff;
   margin: 40px auto;
-  max-width: 1250px; }
+  max-width: 971px; }
   .calendar_fluid .calendar_tittle {
     text-align: center; }
     .calendar_fluid .calendar_tittle h3 {

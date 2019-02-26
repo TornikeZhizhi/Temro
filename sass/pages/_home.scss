@@ -568,7 +568,8 @@
 
 
 .center_fluid {
-   	  flex: 0 0 57%;
+
+   	  margin: 0 30px;
 	
 }
 .wheather_charts_fluid {
@@ -591,7 +592,7 @@
 
 
    .banner_fluid {
-   	 flex: 0 0 20%;
+   	 flex: 1;
    	 background-color: #d9ecf9;
    	 height: 700px;
    }
@@ -602,6 +603,7 @@
 	flex: 0 0 60%;
 	background-color: #fff;
 	padding: 20px;
+	margin-right: 20px;
 
 
 	canvas {
@@ -613,9 +615,9 @@
 
 .days_temp_box {
 	background-color: #fff;
-	padding: 20px 55px;
+	padding: 20px 15px;
 	height: 100%;
-	    flex: 0 0 38%;
+	    flex: 1;
 
 	    .days_temp_tittle {
 	    	padding: 0 20px;
@@ -764,7 +766,7 @@ transform: scale(1,1);
 	padding: 20px 35px;
 	background-color: #fff;
 	margin: 40px auto;
-	max-width: 1250px;
+	max-width: 971px;
 
 	 .calendar_tittle {
 	 	text-align: center;
