@@ -3,8 +3,7 @@
 
 $(document).ready(function(){
 	//Login Js
-
-	 $(".login_box").on("click",function(e){
+	 $(".login_img_box, .login_box span").on("click",function(e){
 	 	$(".header_login_fluid").addClass("active");
 	 	e.stopPropagation()
 	 })
@@ -27,8 +26,6 @@ $(document).ready(function(){
 	 	$("#home_main_fluid").
 	 	css("background-position","70% top ,100% 100%, 50% 100%,"+ y +"  "+ x+" ");
 
-
-	 	// $(".header_decor").css("transform","translate("+x+", 2px)")
 	 })
 
 
@@ -41,35 +38,16 @@ $(document).ready(function(){
 		
 	 })
 
-// new Chart(document.getElementById("mixed-chart"), {
-//     type: 'bar',
-//     data: {
-//       labels: ["12:00", "13:00", "14:00", "15:00"],
-//       datasets: [{
-         
-//           type: "line",
-//           borderColor: "#8e5ea2",
-//           data: [312,42,3,734],
-//           fill: false
-//         }
-//       ]
-//     },
-//     options: {
-//       title: {
-//         display: true,
-//         text: 'საათობრივი პროგნოზი ტემპერატურის გრაფა'
-//       },
-//       legend: { display: false }
-//     }
-// });
 
-
-
+// Owl
 
 $(document).ready(function(){
 			$('.calendar_fluid').owlCarousel({
 		    loop:true,
 		    margin:0,
+		     autoplay:true,
+		    autoplayTimeout:3000,
+		    autoplayHoverPause:true,
 		    smartSpeed:1300,
 		    nav:true,
 		    responsive:{
@@ -91,6 +69,8 @@ $(document).ready(function(){
 
 
 
+// Chart
+
 	var temricha ={
 	"12:00":'40',
 	'13:00': "35",
@@ -105,11 +85,9 @@ $(document).ready(function(){
 	var chatTime = Object.keys(temricha)
 	var tempricha = Object.values(temricha)
 
-// var ctx = document.getElementById("myChart").getContext('2d');
+
 	var ctx = document.getElementById("myChart");
-	// ctx.canvas.width = 600;
-// ctx.canvas.height = 400;
-var myChart = new Chart(ctx, {
+	var myChart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: chatTime,

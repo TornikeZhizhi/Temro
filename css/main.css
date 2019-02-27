@@ -48,8 +48,7 @@ a:hover {
   background-image: url("../img/sun.png"), url("../img/mountain_r.png"), url("../img/mountain_l.png"), url("../img/mountain.png"), linear-gradient(to left, rgba(254, 222, 99, 0.9) 20%, rgba(255, 67, 109, 0.9));
   background-position: 70% top ,right bottom, right bottom ,right bottom;
   background-position: 70% top ,100% 100%, 50% 100%,88% 100%;
-  overflow: hidden;
-  /*background-size: 62%, 85%, 74%;*/ }
+  overflow: hidden; }
 
 .header {
   padding: 70px 100px 0 100px;
@@ -382,7 +381,7 @@ a:hover {
   .wheather_charts_fluid .chart_box {
     flex: 0 0 60%;
     background-color: #fff;
-    padding: 20px;
+    padding: 14px;
     margin-right: 20px; }
     .wheather_charts_fluid .chart_box canvas {
       width: 600px !important;
