@@ -511,58 +511,58 @@
 
    	 0% {
 		
-		transform: translateY(-20px) rotateY(0deg);
+		transform: translateY(-40px);
    	 }
 
 
    	 100%{
-		transform: translateY(0px) rotateY(315deg);
+		transform: translateY(0px);
    	 }
    }
 
    @keyframes moveAnime {
   0% {
   
-    transform: translate3d(2px, 4px, 0) rotateY(20deg) translateY(-30px);
+    transform: translate3d(2px, 4px, 0)  translateY(-30px);
   }
 
   12.5% {
    
-    transform: translate3d(6px, 4px, 0) rotateY(50deg);
+    transform: translate3d(6px, 4px, 0) ;
   }
 
   25% {
 
-    transform: translate3d(10px, 10px, 0) rotateY(75deg);
+    transform: translate3d(10px, 10px, 0) ;
   }
 
   37.5% {
    
-    transform: translate3d(6px, 12px, 0) rotateY(100deg);
+    transform: translate3d(6px, 12px, 0) ;
   }
 
   50% {
   
-    transform: translate3d(0px, 20px, 0) rotateY(145deg);
+    transform: translate3d(0px, 20px, 0) ;
   }
 
   62.5% {
   
-    transform: translate3d(-6px, 12px, 0) rotateY(180deg);
+    transform: translate3d(-6px, 12px, 0) ;
   }
 
   75% {
   
-    transform: translate3d(-10px, 10px, 0) rotateY(210deg);
+    transform: translate3d(-10px, 10px, 0) ;
   }
 
   87.5% {
    
-    transform: translate3d(-6px, 4px, 0) rotateY(250deg);
+    transform: translate3d(-6px, 4px, 0) ;
   }
 
   100% {
-  	transform: translate3d(0, 0, 0) rotateY(280deg) translateY(0px);
+  	transform: translate3d(0, 0, 0) translateY(0px);
   }
 }
 
